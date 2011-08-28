@@ -1,4 +1,12 @@
 class CatsController < ApplicationController
+
+  #
+  # og-image
+  #
+  def og_image
+    @image.path
+  end
+
   #
   # index
   #
@@ -11,7 +19,10 @@ class CatsController < ApplicationController
   #
   def reload
     @image = Image.get
-    render :show
+    respond_to do |f|
+      f.js { render :show }
+      f.html { redirect_to "/##{@image.id}" }
+    end
   end
 
   #
@@ -20,8 +31,8 @@ class CatsController < ApplicationController
   def show
     @image = Image.find params[:id]
     respond_to do |f|
-      f.jpg { send_data @image.data }
-      f.html{ render "index" }
+      f.jpg { send_data @image.data, :type=> 'image/jpeg', :filename=> "#{@image.id}.jpg", }
+      f.html
       f.js
     end
   end

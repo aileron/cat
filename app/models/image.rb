@@ -21,4 +21,11 @@ class Image
       create(:data=> BSON::Binary.new(x.read))
     end
   end
+
+  #
+  # 画像のパス
+  #
+  def path
+    "#{id}.jpg"
+  end
 end

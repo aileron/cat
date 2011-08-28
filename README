@@ -1,0 +1,7 @@
+
+rails new cat -J
+Gemfile を記述して bundle --path vender/bundle
+
+rails g jquery:install
+rails g mongoid:config
+

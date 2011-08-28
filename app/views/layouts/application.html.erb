@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
+  <meta name="Author" content="aileron.cc" /> 
+  <meta name="verify-v1" content="JoskRDdzSYIvyL7atbyP+EETZ6B7RSPxc+/hpYC4s90=" /> 
+  <meta name="viewport" content="width=480, user-scalable=no, maximum-scale=0.6667" /> 
+  <link rel="apple-touch-icon" href="favicon.ico" /> 
+  <meta name="description" content="ailero java web application developper" /> 
+  <meta name="keywords" content="aileron,java,framework,web application,developper,game" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes"/>  
+  <title>Cat</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div id="container">
+    <div id="page">
+
+      <%= yield %>
+
+    </div>
+  </div>
+</body>
+</html>

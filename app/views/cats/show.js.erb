@@ -1,0 +1,2 @@
+$('#image').html('<%= escape_javascript(render 'image') %>');
+window.location.hash = '<%= escape_javascript "#{@image.id}" %>' ;

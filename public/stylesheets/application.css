@@ -1,0 +1,83 @@
+
+* {
+	margin:0; padding:0; border:0; outline:0; 
+	vertical-align:baseline; background:transparent;
+	font-size: 10.5px;
+}
+body {line-height:1;}
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+:focus {outline:0;}
+ins {text-decoration:none;}
+del {text-decoration:line-through;}
+table {border-collapse:collapse; border-spacing:0;}
+
+body
+{
+	text-align:center;
+	background: #4E5963 url(http://aileron.cc/img/pat.png) repeat 0% 0%;
+	padding:0px;
+}
+
+#container
+{
+	text-align:left;
+	width: 100%;
+	background: transparent url(http://aileron.cc/img/grad.png) repeat-x 0% 0%;
+	color: #444;
+	font-family: Arial, Verdana, sans-serif;
+	line-height: 120%;
+}
+
+#page
+{
+	width: 440px;
+	text-align:left;
+    margin: 0 auto;
+	padding-top: 10px;
+}
+
+.contents
+{
+	background-color:white;
+	border-radius: 10px;
+	/*webkit*/-webkit-border-radius: 10px;
+	/*firefox*/-moz-border-radius: 10px;
+	padding: 7px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	position: relative
+}
+
+ul
+{
+	list-style-type:none;
+}
+
+tbody
+{
+	border-top      : 1px dotted black;
+	border-bottom   : 1px dotted black;
+}
+
+h1,h2
+{
+    font-weight     : normal;
+    font-size       : 10.5px;
+	border-top      : 1px dotted black;
+	border-bottom   : 1px dotted black;
+
+}
+
+input{
+  width: 300px;
+  margin: 0;
+  padding: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFAA33), to(#FF8800));   
+  border: 1px #F27300 solid;
+  color: #FFF;
+  -webkit-appearance: none;
+  -webkit-border-radius: 10px;
+  -webkit-box-shadow: 0 2px 2px #CCC;
+  text-shadow: 1px 2px 3px #C45C00;
+}

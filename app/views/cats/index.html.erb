@@ -1,0 +1,27 @@
+
+<div id="image" class="contents" style="text-align:center; height:280px">
+</div>
+
+<div class="contents" style="text-align:center">
+  <%= button_to "reload", { :action=> :reload }, :remote => true %>
+</div>
+
+<script>
+  $(function()
+  {
+    var authenticity_token = $('meta[name="csrf-token"]').attr('content');
+    var id ;
+    if(window.location.hash)
+    {
+      id = window.location.hash.substring(1);
+    }
+    else
+    {
+      id = "<%= escape_javascript "#{@image.id}" %>";
+    }
+    $.get("/" + id + ".js",{'authenticity_token': authenticity_token}, function(js)
+    {
+      eval(js);
+    });
+  });
+</script>

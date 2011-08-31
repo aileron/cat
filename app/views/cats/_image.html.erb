@@ -1,5 +1,5 @@
 <h1><a href="<%= "/##{@image.id}" %>">cat</a></h1>
-<%= image_tag "/#{@image.id}.jpg" %>
+<%= image_tag "http://#{request.raw_host_with_port}/#{ @image.id}.jpg" %>
 <iframe src="http://www.facebook.com/plugins/like.php?app_id=255908937773022&amp;href=<%= u("http://cat.aileron.cc/#{@image.id}.html") %>&amp;send=false&amp;layout=box_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=90" 
     scrolling="no" 
     frameborder="0" 

@@ -31,7 +31,7 @@ class CatsController < ApplicationController
   def show
     @image = Image.find params[:id]
     respond_to do |f|
-      f.jpg { send_data @image.data, :type=> 'image/jpeg', :filename=> "#{@image.id}.jpg", }
+      f.jpg { send_data @image.data, :type=> :jpg, :disposition=>'inline' }
       f.html
       f.js
     end

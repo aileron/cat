@@ -1,11 +1,11 @@
 
 APP_ROOT = '/home/aileron/cat'
 
-port = 3000
-listen port, :tcp_nopush => true
+listen "#{APP_ROOT}/tmp/sockets/unicorn.sock", :backlog => 64
+
 timeout 30
 preload_app  true
-worker_processes 10
+worker_processes 5
 pid "#{APP_ROOT}/tmp/pids/unicorn.pid"
 stderr_path "#{APP_ROOT}/log/unicorn.log"
 stdout_path "#{APP_ROOT}/log/unicorn.log"

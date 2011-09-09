@@ -4,7 +4,8 @@ class Image
   require 'open-uri'
   require 'digest/md5'
 
-  field :data, :type=> BSON::Binary, :unique => true
+  field :data, :type=> BSON::Binary
+  field :hash, :unique => true
 
   #
   # 適当に一件取得
@@ -19,7 +20,8 @@ class Image
   #
   def self.fetch
     open('http://www.randomkittengenerator.com/randomkitten.php', 'rb', 'Referer'=> 'http://www.randomkittengenerator.com/') do |x|
-      create(:data=> BSON::Binary.new(x.read) )
+      data = x.read
+      create(:hash => Digest::MD5.hexdigest(data), :data=> BSON::Binary.new(data) )
     end
   end
 

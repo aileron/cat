@@ -7,6 +7,6 @@ reload)
     kill -HUP $(cat tmp/pids/unicorn.pid);;
 start)
     bundle exec unicorn_rails -c config/unicorn.rb -E production -D;;
-*) echo "unicorn [start|stop|restart]"
+*) echo "unicorn [start|stop|reload]"
 esac
 

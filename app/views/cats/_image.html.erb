@@ -4,9 +4,17 @@
 </div>
 
 <div class="contents">
-<iframe src="http://www.facebook.com/plugins/like.php?app_id=255908937773022&amp;href=<%= u("http://cat.aileron.cc/#{@image.id}.html") %>&amp;send=false&amp;layout=box_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=90" 
+
+  <iframe src="http://www.facebook.com/plugins/like.php?app_id=255908937773022&amp;href=<%= u("http://cat.aileron.cc/#{@image.id}.html") %>&amp;send=false&amp;layout=box_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=90" 
     scrolling="no" 
     frameborder="0" 
     style="border:none; overflow:hidden; width:100px; height:65px; " 
     allowTransparency="true"></iframe>
+
+  <span style="display: none;" itemscope itemref="square" itemtype="http://growbutton.com/ns#button">
+    <span itemprop="url"><%= "http://#{request.raw_host_with_port}/#{ @image.id}.html"  %></span>
+    <span itemprop="title">rundom cats</span>
+    <span itemprop="image"><%= "http://#{request.raw_host_with_port}/#{ @image.id}.jpg" %></span>
+    <span itemprop="site_name">rundom cats</span>
+  </span>
 </div>

@@ -1,9 +1,4 @@
-<%= render 'image' %>
-
-<div class="contents" style="text-align:center">
-  <%= button_to "reload", { :action=> :reload }, :remote => true %>
-</div>
-
+<%=render :partial=>'frame'%>
 <script>
   $(function()
   {
@@ -25,5 +20,6 @@
     {
       window.location.href = "#<%= @image.id %>" ;
     }
+    GrowButton.generate();
   });
 </script>

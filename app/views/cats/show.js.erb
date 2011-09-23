@@ -1,2 +1,10 @@
-$('#image').html('<%= escape_javascript(render 'image') %>');
-window.location.hash = '#<%=@image.id%>' ;
+if ( window.location.pathname=='/')
+{
+  $('#image').html('<%= escape_javascript(render 'image') %>');
+  window.location.hash = '#<%=@image.id%>' ;
+  GrowButton.generate();
+}
+else
+{
+  window.location.href="/";
+}

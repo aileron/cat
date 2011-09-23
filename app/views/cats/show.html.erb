@@ -1,5 +1,7 @@
-<%= render 'image' %>
-
-<div class="contents" style="text-align:center">
-  <%= button_to "reload", { :action=> :reload } %>
-</div>
+<%=render :partial=>'frame'%>
+<script type="text/javascript">
+  $(function ()
+  {
+    GrowButton.generate();
+  });
+</script>

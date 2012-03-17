@@ -15,6 +15,12 @@ class CatsController < ApplicationController
   end
 
   #
+  # 
+  #
+  def last
+  end
+
+  #
   # reload
   #
   def reload

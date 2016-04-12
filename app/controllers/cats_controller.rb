@@ -1,13 +1,6 @@
 class CatsController < ApplicationController
 
   #
-  # og-image
-  #
-  def og_image
-    @image.path
-  end
-
-  #
   # index
   #
   def index
@@ -29,6 +22,12 @@ class CatsController < ApplicationController
       f.js { render :show }
       f.html { redirect_to "/##{@image.id}" }
     end
+  end
+
+  #
+  # gallery
+  #
+  def gallery
   end
 
   #

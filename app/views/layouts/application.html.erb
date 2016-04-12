@@ -3,7 +3,6 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
   <meta name="Author" content="aileron.cc" /> 
-  <link rel="apple-touch-icon" href="<%= "http://#{request.raw_host_with_port}/#{og_image}" %>" /> 
   <meta name="apple-mobile-web-app-capable" content="yes"/>  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" />
   <meta name="description" content="rundom cat images" /> 
@@ -11,13 +10,17 @@
   <meta name="fb:admins" property="fb:admins" content="100000855517275" />
   <meta name="og:title" property="og:title" content="random cats" />
   <meta name="og:type" property="og:type" content="website" />
-  <meta name="og:url" property="og:url" content="http://cat.aileron.cc/<%= @image.id %>.html" />
   <meta name="og:site_name" property="og:site_name" content="RandomCats" />
-  <meta name="og:image" property="og:image" content="<%= "http://#{request.raw_host_with_port}/#{og_image}" %>"/> 
   <title>RandomCats</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+ 
+  <% if @image %>
+  <link rel="apple-touch-icon" href="<%= "http://#{request.raw_host_with_port}/#{@image.path}" %>" /> 
+  <meta name="og:url" property="og:url" content="http://cat.aileron.cc/<%= @image.id %>.html" />
+  <meta name="og:image" property="og:image" content="<%= "http://#{request.raw_host_with_port}/#{@image.path}" %>"/>
+  <% end %>
 </head>
 <body>
   <div id="container">

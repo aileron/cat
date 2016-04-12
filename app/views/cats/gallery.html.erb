@@ -1,0 +1,12 @@
+<script type="text/javascript" src="http://masonry.desandro.com/jquery.masonry.min.js" >
+    $('#images').masonry({
+        itemSelector: '.box'
+    });
+</script>
+<div id="images">
+    <%Image.all.desc(:updated_at).page(params[:page]).each do |image|%>
+        <div class="box">
+            <%=image_tag "http://#{request.raw_host_with_port}/#{image.id}.jpg" %>
+        </div>
+    <%end%>
+</div>
